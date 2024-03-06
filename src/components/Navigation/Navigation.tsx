@@ -16,7 +16,7 @@ const Navigation = () => {
           <ul className="inline-block">
             <li className="flex justify-start items-center gap-3">
               <Link to={""}>nav1</Link>
-              <div  onClick={() => setShowDropdown(!ShowDropdown) } className="inline-block">
+              <div tabIndex={0} onBlur={() => setTimeout(() => setShowDropdown(false), 2000 ) }  onClick={() => setShowDropdown(!ShowDropdown) } className="inline-block">
                 <span className="border py-2 px-2 relative cursor-pointer">Dropdown</span>
                 {
                   ShowDropdown ? (
